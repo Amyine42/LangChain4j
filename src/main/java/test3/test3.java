@@ -21,12 +21,12 @@ public class test3 {
                 .build();
 
 
-        String text1 = "add milk";
-        String text2 = "Hi";
+        String text1 = "cat";
+        String text2 = "dog";
 
         Embedding embeddingText1 = embeddingModel.embed(text1).content();
         Embedding embeddingText2 = embeddingModel.embed(text2).content();
 
-        System.out.println("cosine similarity between text1 and text2 is : " + CosineSimilarity.between(embeddingText1, embeddingText2));
+        System.out.println("cosine similarity between text1:"+text1+" and text2:"+text2+" is : " + CosineSimilarity.between(embeddingText1, embeddingText2));
     }
 }
