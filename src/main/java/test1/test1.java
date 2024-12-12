@@ -5,7 +5,6 @@ import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
 
 public class test1 {
     public static void main(String[] args) {
-        String apiKey = System.getenv("GEMINI_API_KEY");
         // Création du modèle avec le builder
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .modelName("gemini-1.5-flash")
@@ -14,7 +13,7 @@ public class test1 {
                 .build();
 
         // Pose d'une question simple
-        String question = "Quelle est la différence entre Java et Python?";
+        String question = "Combien de kcal dans une banane?";
         String reponse = model.generate(question);
 
         // Affichage de la réponse

@@ -10,7 +10,6 @@ import java.util.Map;
 public class test2 {
 
     public static void main(String[] args) {
-        String apiKey = System.getenv("GEMINI_API_KEY");
         // Création du modèle avec le builder
         ChatLanguageModel model = GoogleAiGeminiChatModel.builder()
                 .modelName("gemini-1.5-flash")
@@ -27,6 +26,8 @@ public class test2 {
                         "text", texteATraduire
                 ));
 
+
+        System.out.println("Question : " + texteATraduire);
         String reponse = model.generate(prompt.text());
         System.out.println(reponse);
     }
