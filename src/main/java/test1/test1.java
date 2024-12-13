@@ -13,7 +13,7 @@ public class test1 {
                 .build();
 
         // Pose d'une question simple
-        String question = "Combien de kcal dans une banane?";
+        String question = "Comment s'appelle le chat de Pierre?";
         String reponse = model.generate(question);
 
         // Affichage de la réponse
