@@ -31,7 +31,7 @@ public class TestRAG {
                 .build();;
 
         // Chargement du document, sous la forme d'embeddings, dans une base vectorielle en mémoire
-        String nomDocument = "infos.txt";
+        String nomDocument = "langchain4j.pdf";
         Document document = FileSystemDocumentLoader.loadDocument(nomDocument);
         InMemoryEmbeddingStore embeddingStore = new InMemoryEmbeddingStore<>();
         // Calcule les embeddings et les enregistre dans la base vectorielle
@@ -48,7 +48,7 @@ public class TestRAG {
                         .build();
 
         // Le LLM va utiliser l'information du fichier infos.txt pour répondre à la question.
-        String question = "Comment s'appelle le chat de Pierre ?";
+        String question = "Qui a fait ce cours LangCHain4j?";
         // L'assistant analyse la question et recherche les informations pertinentes
         // pour la question dans la base vectorielle.
         // Ces informations pertinentes sont ajoutées à la question et le tout est envoyé au LLM.
